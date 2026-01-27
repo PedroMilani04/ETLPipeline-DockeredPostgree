@@ -5,7 +5,6 @@ from sqlalchemy import create_engine
 # --- 1. CONFIGURATION & DICTIONARY ---
 BASE_URL = "https://api.open-meteo.com/v1/forecast"
 
-# Our city "Catalog"
 CITIES = {
     "1": {"name": "Sao Paulo", "lat": -23.55, "lon": -46.63},
     "2": {"name": "Rio de Janeiro", "lat": -22.90, "lon": -43.17},
@@ -47,7 +46,7 @@ def extract_weather_data(city_info):
         "latitude": city_info['lat'],
         "longitude": city_info['lon'],
         "hourly": "temperature_2m,relative_humidity_2m,precipitation,wind_speed_10m",
-        "timezone": "auto" # 'auto' adjusts timezone to the city location
+        "timezone": "auto" # 'auto' 
     }
     
     print(f"1. [EXTRACT] Downloading data for {city_info['name']}...")
@@ -75,8 +74,6 @@ def transform_data(raw_data, city_name):
     }
     df = df.rename(columns=column_map)
     
-    # --- THE MAGIC HERE ---
-    # We add a fixed column with the city name
     df['city'] = city_name
     
     return df
@@ -86,7 +83,6 @@ def load_data_to_postgres(df):
     print(f"3. [LOAD] Saving {len(df)} total lines to Database...")
     try:
         engine = create_engine(DB_CONNECTION_URI)
-        # if_exists='replace' will recreate the table with the new data from this execution
         df.to_sql('weather_forecast', engine, if_exists='replace', index=False)
         print("✅ Load complete successfully!")
     except Exception as e:
