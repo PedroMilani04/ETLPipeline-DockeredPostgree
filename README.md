@@ -2,7 +2,7 @@
 
 This repository contains a complete **ETL (Extract, Transform, Load) pipeline** solution designed to ingest, process, and persist meteorological data. It implements a modern data engineering workflow, focusing on infrastructure isolation via Docker, efficient data transformation with `pandas`, and robust storage using PostgreSQL.
 
-![Diagrama da Arquitetura do Pipeline ETL](https://github.com/PedroMilani04/ETLPipeline-DockeredPostgree/blob/master/assets/docker.png
+![Diagrama da Arquitetura do Pipeline ETL](https://github.com/PedroMilani04/ETLPipeline-DockeredPostgree/blob/master/assets/app.png
 )
 ---
 
