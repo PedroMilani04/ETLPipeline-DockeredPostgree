@@ -93,3 +93,8 @@ The pipeline automatically provisions and populates the `weather_forecast` table
     ```bash
     python pipeline.py
     ```
+
+5.  **Execute the Dashboard:**
+    ```bash
+     streamlit run pipeline/dashboard.py       
+    ```
