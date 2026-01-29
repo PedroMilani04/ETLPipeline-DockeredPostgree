@@ -1,6 +1,6 @@
-# End-to-End Weather Data Pipeline with Python and PostgreSQL
+# End-to-End Weather Data Pipeline with Python and PostgreSQL + Streamlit Dashboard Visualization
 
-This repository contains a complete **ETL (Extract, Transform, Load) pipeline** solution designed to ingest, process, and persist meteorological data. It implements a modern data engineering workflow, focusing on infrastructure isolation via Docker, efficient data transformation with `pandas`, and robust storage using PostgreSQL.
+This repository contains a complete **ETL (Extract, Transform, Load) pipeline** solution designed to ingest, process, and persist meteorological data. It implements a modern data engineering workflow, focusing on infrastructure isolation via Docker, efficient data transformation with `pandas`, and robust storage using PostgreSQL. For the finishing touches, a Streamlit Dashboard as also added for easy data visualization as well as the table visualization for each city data extracted, containing Temperature, Humidity, Wind, Temperature Variation and Precipitation.
 
 ![Diagrama da Arquitetura do Pipeline ETL](https://github.com/PedroMilani04/ETLPipeline-DockeredPostgree/blob/master/assets/app.png
 )
